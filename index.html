@@ -306,6 +306,29 @@
             box-shadow: 0 0 0 3px var(--blue-light);
         }
 
+        /* Inline Input for Fill-in-the-blank */
+        .inline-input {
+            display: inline-block;
+            background: transparent;
+            border: none;
+            border-bottom: 2px solid var(--text-color);
+            color: var(--blue-dark);
+            font-weight: 700;
+            font-family: inherit;
+            font-size: 1.1rem;
+            padding: 0 0.5rem;
+            margin: 0 0.25rem;
+            width: 150px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .inline-input:focus {
+            outline: none;
+            border-bottom-color: var(--blue);
+            background-color: var(--blue-light);
+            border-radius: 4px 4px 0 0;
+        }
+
         /* Drop Zone */
         .drop-zone {
             border: 2px dashed var(--text-color-muted);
@@ -1205,132 +1228,6 @@ const translations = {
         permissionDeniedInfo2: 'Para habilitarlo, ve a la configuración del sitio en tu navegador y permite el acceso al micrófono.',
         permissionRefreshButton: 'Lo he habilitado, actualizar',
         checkingPermissions: 'Comprobando permisos...',
-    },
-    fr: {
-        // Step 1
-        step1Title: 'Étape 1: Fournir le Contenu',
-        pasteTabText: 'Coller le Texte',
-        uploadTabText: 'Télécharger un Fichier',
-        topicTabText: 'Générer à partir d\'un Sujet',
-        loadCodeTabText: 'Charger depuis Code',
-        pastePlaceholder: 'Collez votre texte ici pour générer un quiz...',
-        codePlaceholder: 'Collez votre code de quiz ici...',
-        loadQuizButton: 'Charger le Quiz',
-        invalidQuizCode: 'Code de quiz invalide. Veuillez vérifier le code et réessayer.',
-        nextButton: 'Suivant',
-        dropZoneText: 'Glissez-déposez des fichiers (PDF, DOCX, JPG, PNG) ou cliquez pour sélectionner',
-        topicPlaceholder: 'ex., L\'Empire Romain',
-        topicLengthLabel: 'Longueur',
-        short: 'Court',
-        medium: 'Moyen',
-        long: 'Long',
-        generateUseTextButton: 'Générer et Utiliser le Texte',
-        // API Key Prompt
-        apiKeyRequiredTitle: "Clé API Requise pour l'Analyse d'Image",
-        apiKeyRequiredInfo: "Pour analyser des images, vous devez sélectionner une clé API. Cette action peut nécessiter un projet avec la facturation activée.",
-        apiKeyLearnMore: 'En savoir plus sur la facturation.',
-        apiKeyError: "Votre clé API n'a pas les bonnes autorisations. Veuillez sélectionner un projet avec la facturation activée et réessayer.",
-        selectApiKey: "Sélectionner la Clé d'API",
-        cancel: 'Annuler',
-        // Step 2
-        step2Title: 'Étape 2: Personnalisez votre Quiz',
-        difficultyLabel: 'Difficulté',
-        easy: 'Facile',
-        hard: 'Difficile',
-        aiChooseAmountLabel: "Laisser l'IA choisir le nombre de questions",
-        numQuestionsLabel: 'Nombre de Questions',
-        questionTypesLabel: 'Types de Questions (sélectionnez-en au moins un)',
-        multipleChoice: 'Choix Multiple',
-        trueFalse: 'Vrai / Faux',
-        matching: 'Association',
-        shortAnswer: 'Réponse Courte',
-        longAnswer: 'Réponse Longue',
-        fillInTheBlank: 'Texte à Trous',
-        correctionStyleLabel: 'Style de Correction',
-        immediate: 'Immédiate',
-        aprèsLeQuiz: 'Après le Quiz',
-        both: 'Les Deux',
-        spacedRepetitionLabel: 'Mode de Répétition Espacée',
-        generateQuizButton: 'Générer le Quiz',
-        // Quiz Step
-        reviewingQuestion: 'En révision',
-        of: 'de',
-        question: 'Question',
-        maxAttemptsReached: "Vous avez atteint le nombre maximum de tentatives pour cette question.",
-        loadingMatchingGame: "Chargement du jeu d'association...",
-        typeYourAnswer: 'Tapez votre réponse ici...',
-        submitAnswer: 'Soumettre la Réponse',
-        grading: 'Évaluation...',
-        continueToReview: 'Continuer vers la Révision',
-        finishQuiz: 'Terminer le Quiz',
-        // Results Step
-        quizComplete: 'Quiz Terminé !',
-        score: 'Score',
-        correct: 'Correctes',
-        reviewAnswers: 'Révisez vos Réponses',
-        yourAnswer: 'Votre Réponse',
-        yourScore: 'Votre Score',
-        points: 'Points',
-        correctPairings: 'Associations Correctes',
-        correctAnswer: 'Réponse Correcte',
-        aiFeedback: 'Feedback de l\'IA',
-        explanation: 'Explication',
-        tryAgain: 'Réessayer',
-        createNewQuiz: 'Créer un Nouveau Quiz',
-        // Loading Screen
-        generatingQuizLoader: 'Génération de votre quiz...',
-        analyzingPdfLoader: 'Analyse du PDF...',
-        analyzingDocxLoader: 'Analyse du DOCX...',
-        analyzingImageLoader: "Analyse de l'Image (OCR)...",
-        researchingTopicLoader: 'Recherche sur',
-        loadingFromCode: 'Chargement de votre quiz...',
-        pdfOcrFallback: 'Aucun texte trouvé, essai de l\'OCR...',
-        processingFile: 'Traitement du fichier',
-        noTextExtracted: 'Impossible d\'extraire du texte des fichiers sélectionnés.',
-        adaptingForAudio: 'Adaptation des questions pour l\'audio...',
-        // Export
-        export: 'Exporter',
-        saveAsPdf: 'Enregistrer en PDF',
-        generateAudio: 'Générer un Fichier Audio (.wav)',
-        saveToCode: 'Enregistrer le Quiz en Code',
-        exportToFlashcards: 'Étudier avec des Cartes',
-        exportToConversational: 'Démarrer le Quiz Conversationnel',
-        yourQuizCode: 'Votre Code de Quiz',
-        copy: 'Copier',
-        copied: 'Copié !',
-        close: 'Fermer',
-        generatingPdf: 'Génération du PDF...',
-        generatingAudioFor: "Génération de l'audio pour la question",
-        combiningAudio: "Combinaison des fichiers audio...",
-        pdfExportSettings: 'Paramètres d\'Exportation PDF',
-        audioExportSettings: 'Paramètres d\'Exportation Audio',
-        pdfModalInfo: 'Votre quiz sera enregistré en tant que fichier PDF en utilisant la police Oxygen pour une meilleure compatibilité.',
-        pauseDuration: 'Pause entre les éléments',
-        seconds: 'secondes',
-        // Flashcards
-        preparingFlashcards: 'Préparation de vos cartes...',
-        gotItRight: 'Correct',
-        gotItWrong: 'Incorrect',
-        dragCardHere: 'Faites glisser la carte ici',
-        flashcardsComplete: 'Toutes les Cartes Maîtrisées !',
-        studyAgain: 'Réviser à Nouveau',
-        exitFlashcards: 'Quitter les Cartes',
-        card: 'Carte',
-        flashcardHint: 'Cliquez sur la carte pour la retourner, puis choisissez si vous avez eu raison ou tort.',
-        goToHomepage: 'Aller à la Page d\'Accueil',
-        // Conversation Mode
-        exitConversation: 'Quitter la Conversation',
-        conversationStatusInitializing: 'Initialisation de l\'audio...',
-        conversationStatusAsking: 'OmniQuiz pose une question...',
-        conversationStatusListening: "J'écoute... Donnez votre réponse.",
-        conversationStatusEvaluating: 'Vérification de votre réponse...',
-        conversationStatusResponding: 'OmniQuiz répond...',
-        conversationStatusComplete: 'Quiz conversationnel terminé !',
-        permissionDeniedTitle: 'Accès au Microphone Refusé',
-        permissionDeniedInfo1: "OmniQuiz a besoin d'accéder à votre microphone pour le quiz conversationnel.",
-        permissionDeniedInfo2: "Pour l'activer, rendez-vous dans les paramètres du site de votre navigateur et autorisez l'accès au microphone.",
-        permissionRefreshButton: "Je l'ai activé, rafraîchir",
-        checkingPermissions: 'Vérification des permissions...',
     }
 };
 
@@ -1371,22 +1268,9 @@ const ThemeToggleButton = ({ theme, toggleTheme }) => (
     </button>
 );
 
-// Wrapper function to handle seamless fallback to 1.5-flash on error
+// Wrapper function - 1.5 flash removed as requested
 const generateWithFallback = async (ai, params) => {
-    try {
-        return await ai.models.generateContent(params);
-    } catch (error) {
-        console.warn("Primary model request failed. Attempting fallback to gemini-1.5-flash.", error);
-        try {
-            return await ai.models.generateContent({
-                ...params,
-                model: 'gemini-1.5-flash'
-            });
-        } catch (fallbackError) {
-             console.error("Fallback model request also failed.", fallbackError);
-             throw error; 
-        }
-    }
+    return await ai.models.generateContent(params);
 };
 
 const App = () => {
@@ -1533,7 +1417,7 @@ const App = () => {
             The quiz questions should be ${difficultyDescription}.
             The entire quiz, including all questions, options (for multiple-choice), answers, and explanations, MUST be in ${targetLanguage}.
             The question types should be from this list: [${options.questionTypes.join(', ')}].
-            - For 'multiple-choice', provide exactly 4 options.
+            - For 'multiple-choice', provide exactly 4 options. Do NOT include letters (A, B, C, D) or numbers at the beginning of the options.
             - For 'true-false', the answer must be 'True' or 'False'. 
             - For 'fill-in-the-blank', provide a sentence with '_____' as the blank, and the answer should be the word that fills it.
             - For 'matching', the 'question' should be an instruction like "Match the following terms to their definitions". Do not provide an 'answer'. Instead, populate the 'matchPairs' field with an array of 3 to 5 objects, where each object has a 'term' and a 'definition'. Keep terms and definitions relatively short.
@@ -2294,7 +2178,44 @@ const QuizStep = ({ quizData, onComplete, options, contextText, t }) => {
                     gradingResult.isCorrect = currentAnswer === currentQuestion.answer;
                     break;
                 case 'fill-in-the-blank':
-                    gradingResult.isCorrect = currentAnswer.toLowerCase().trim() === currentQuestion.answer.toLowerCase().trim();
+                    const cleanUser = currentAnswer.toLowerCase().trim();
+                    const cleanAnswer = currentQuestion.answer.toLowerCase().trim();
+                    if (cleanUser === cleanAnswer) {
+                        gradingResult.isCorrect = true;
+                    } else {
+                        // Fallback to AI for fuzzy matching (typos, synonyms)
+                        const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+                        const prompt = `Analyze if the user's fill-in-the-blank answer is correct considering the context, synonyms, or minor typos.
+                        
+                        Context:
+                        ---
+                        ${contextText.substring(0, 1500)}
+                        ---
+                        Question: ${currentQuestion.question}
+                        Correct Answer: ${currentQuestion.answer}
+                        User Answer: ${currentAnswer}
+                        
+                        Return JSON with "isCorrect" (boolean) and "feedback" (string).`;
+                        
+                        const response = await generateWithFallback(ai, {
+                            model: 'gemini-2.5-flash',
+                            contents: prompt,
+                            config: {
+                                responseMimeType: 'application/json',
+                                responseSchema: {
+                                    type: Type.OBJECT,
+                                    properties: {
+                                        isCorrect: { type: Type.BOOLEAN },
+                                        feedback: { type: Type.STRING },
+                                    },
+                                    required: ['isCorrect', 'feedback']
+                                }
+                            }
+                        });
+                        const result = JSON.parse(response.text);
+                        gradingResult.isCorrect = result.isCorrect;
+                        gradingResult.feedback = result.feedback;
+                    }
                     break;
                 case 'matching':
                      // This case is now handled by the auto-submit useEffect
@@ -2513,7 +2434,12 @@ const QuizStep = ({ quizData, onComplete, options, contextText, t }) => {
                         </div>
                     </div>
                 );
-            default: // short-answer, long-answer, fill-in-the-blank
+            case 'fill-in-the-blank':
+                if (/_{2,}/.test(currentQuestion.question)) {
+                    return null;
+                }
+                return <textarea className="textarea" placeholder={t('typeYourAnswer')} value={currentAnswer || ''} onChange={(e) => setCurrentAnswer(e.target.value)} readOnly={isGraded} />;
+            default: // short-answer, long-answer
                 return <textarea className="textarea" placeholder={t('typeYourAnswer')} value={currentAnswer || ''} onChange={(e) => setCurrentAnswer(e.target.value)} readOnly={isGraded} />;
         }
     };
@@ -2528,7 +2454,27 @@ const QuizStep = ({ quizData, onComplete, options, contextText, t }) => {
             <div className="progress-bar">
                 <div className="progress-bar-inner" style={{ width: `${((currentQuestionIndex + 1) / currentQuizData.length) * 100}%` }}></div>
             </div>
-            <p className="question-text" dangerouslySetInnerHTML={{ __html: marked.parse(currentQuestion.question || '').replace(/<p>|<\/p>/g, '') }}></p>
+            {currentQuestion.type === 'fill-in-the-blank' ? (
+                <div className="question-text" style={{ lineHeight: '2' }}>
+                    {currentQuestion.question.split(/_{2,}/).map((part, index, arr) => (
+                        <React.Fragment key={index}>
+                            <span dangerouslySetInnerHTML={{ __html: marked.parse(part).replace(/<p>|<\/p>/g, '') }} />
+                            {index < arr.length - 1 && (
+                                <input
+                                    type="text"
+                                    className="inline-input"
+                                    value={currentAnswer || ''}
+                                    onChange={(e) => !isGraded && setCurrentAnswer(e.target.value)}
+                                    disabled={isGraded}
+                                    autoComplete="off"
+                                />
+                            )}
+                        </React.Fragment>
+                    ))}
+                </div>
+            ) : (
+                <p className="question-text" dangerouslySetInnerHTML={{ __html: marked.parse(currentQuestion.question || '').replace(/<p>|<\/p>/g, '') }}></p>
+            )}
             {renderAnswerField()}
             
             {showFeedback && feedback && (
