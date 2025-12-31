@@ -1370,7 +1370,7 @@ const App = () => {
         showLoader(t('generatingQuizLoader'), contextText);
 
         try {
-            const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
             const schema = {
                 type: Type.ARRAY,
                 items: {
@@ -1543,7 +1543,7 @@ const LoadingScreen = ({ text, context, language, t }) => {
         const getFunFact = async () => {
             if (context) {
                 try {
-                    const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+                    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                      const languageMap = { en: 'English', es: 'Spanish', fr: 'French' };
                      const targetLanguage = languageMap[language] || 'English';
 
@@ -1659,7 +1659,7 @@ const InputStep = ({ onContextReady, onLoadFromCode, showLoader, hideLoader, t }
                             await new Promise(res => setTimeout(res, 1500));
                             
                             let ocrText = '';
-                            const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+                            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                             for (let i = 1; i <= pdf.numPages; i++) {
                                 showLoader(`${t('analyzingImageLoader')} (PDF Page ${i}/${pdf.numPages})`);
                                 const page = await pdf.getPage(i);
@@ -1712,7 +1712,7 @@ const InputStep = ({ onContextReady, onLoadFromCode, showLoader, hideLoader, t }
                             return reject(new Error("Error reading image file: result is not a string."));
                         }
                         const base64Data = e.target.result.split(',')[1];
-                        const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+                        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                         const response = await generateWithFallback(ai, {
                             model: "gemini-2.5-flash",
                             contents: { parts: [{ inlineData: { mimeType: file.type, data: base64Data } }, { text: "Extract the text from this image." }] },
@@ -1785,7 +1785,7 @@ const InputStep = ({ onContextReady, onLoadFromCode, showLoader, hideLoader, t }
         if (!topic) return;
         showLoader(`${t('researchingTopicLoader')} "${topic}"...`);
         try {
-            const ai = new GoogleGenAI({apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU'});
+            const ai = new GoogleGenAI({apiKey: process.env.API_KEY});
             const lengthMap = {
                 short: 'a concise summary of about 600 words',
                 medium: 'a comprehensive text of about 1000 words',
@@ -1960,7 +1960,7 @@ const FlashcardStep = ({ quizData, onExit, showLoader, hideLoader, t, language }
         const makeCardsConcise = async () => {
             if (!quizData || quizData.length === 0) return;
             showLoader(t('preparingFlashcards'));
-            const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+            const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
             const languageMap = { en: 'English', es: 'Spanish', fr: 'French' };
             const targetLanguage = languageMap[language];
 
@@ -2184,7 +2184,7 @@ const QuizStep = ({ quizData, onComplete, options, contextText, t }) => {
                         gradingResult.isCorrect = true;
                     } else {
                         // Fallback to AI for fuzzy matching (typos, synonyms)
-                        const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+                        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                         const prompt = `Analyze if the user's fill-in-the-blank answer is correct considering the context, synonyms, or minor typos.
                         
                         Context:
@@ -2222,7 +2222,7 @@ const QuizStep = ({ quizData, onComplete, options, contextText, t }) => {
                     break;
                 case 'short-answer':
                 case 'long-answer':
-                    const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+                    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
                     const prompt = `Based on the provided context text, evaluate if the user's answer is correct for the given question and model answer. Your response must be a JSON object with three keys: "isCorrect" (boolean, true if the answer is fully correct), "isPartiallyCorrect" (boolean, true if the answer is on the right track but incomplete or has minor errors), and "feedback" (a string providing a concise explanation for why the answer is correct, partially correct, or incorrect, comparing it to the model answer).
 
                     Context:
@@ -2525,7 +2525,7 @@ const regenerateMatchingQuestionsForAudio = async (originalQuizData, contextText
 
     showLoader(t('adaptingForAudio'));
     try {
-        const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
+        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
         const languageMap = { en: 'English', es: 'Spanish', fr: 'French' };
         const targetLanguage = languageMap[language];
         
@@ -2786,7 +2786,7 @@ const ExportDropdown = ({ quizData, onEnterFlashcards, onEnterConversationMode, 
     const handleGenerateAudio = async () => {
         const audioFriendlyQuizData = await regenerateMatchingQuestionsForAudio(quizData, contextText, language, t, showLoader, hideLoader);
 
-        const ai = new GoogleGenAI({apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU'});
+        const ai = new GoogleGenAI({apiKey: process.env.API_KEY});
         const languageMap = { en: { voice: 'Zephyr' }, es: { voice: 'Puck' }, fr: { voice: 'Charon' } };
         const voiceName = languageMap[language]?.voice || 'Zephyr';
 
@@ -3153,7 +3153,7 @@ const ConversationStep = ({ quizData, onExit, t, language, contextText, showLoad
                 outputAudioContextRef.current = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 24000 });
                 mediaStreamRef.current = await navigator.mediaDevices.getUserMedia({ audio: true });
 
-                const ai = new GoogleGenAI({apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU'});
+                const ai = new GoogleGenAI({apiKey: process.env.API_KEY});
                 const sessionPromise = ai.live.connect({
                     model: 'gemini-2.5-flash-native-audio-preview-09-2025',
                     config: {
