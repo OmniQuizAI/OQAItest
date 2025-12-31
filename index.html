@@ -1193,132 +1193,6 @@ const translations = {
         flashcardHint: 'Click card to flip, then choose if you got it right or wrong.',
         goToHomepage: 'Go to Homepage',
         // Conversation Mode
-        exitConversation: 'Exit Conversation',
-        conversationStatusInitializing: 'Initializing audio...',
-        conversationStatusAsking: 'OmniQuiz is asking a question...',
-        conversationStatusListening: "Listening... Speak your answer.",
-        conversationStatusEvaluating: "Checking your answer...",
-        conversationStatusResponding: 'OmniQuiz is responding...',
-        conversationStatusComplete: 'Conversational quiz complete!',
-        permissionDeniedTitle: 'Microphone Access Denied',
-        permissionDeniedInfo1: 'OmniQuiz needs access to your microphone for the conversational quiz.',
-        permissionDeniedInfo2: "To enable it, please go to your browser's site settings and allow microphone access.",
-        permissionRefreshButton: "I've enabled it, refresh",
-        checkingPermissions: 'Checking microphone permissions...',
-    },
-    es: {
-        // Step 1
-        step1Title: 'Paso 1: Proporcionar Contenido',
-        pasteTabText: 'Pegar Texto',
-        uploadTabText: 'Subir Archivo',
-        topicTabText: 'Generar desde Tema',
-        loadCodeTabText: 'Cargar desde Código',
-        pastePlaceholder: 'Pega tu texto aquí para generar un cuestionario...',
-        codePlaceholder: 'Pega tu código de cuestionario aquí...',
-        loadQuizButton: 'Cargar Cuestionario',
-        invalidQuizCode: 'Código de cuestionario inválido. Por favor, revisa el código e intenta de nuevo.',
-        nextButton: 'Siguiente',
-        dropZoneText: 'Arrastra y suelta archivos (PDF, DOCX, JPG, PNG) o haz clic para seleccionar',
-        topicPlaceholder: 'ej., El Imperio Romano',
-        topicLengthLabel: 'Longitud',
-        short: 'Corto',
-        medium: 'Medio',
-        long: 'Largo',
-        generateUseTextButton: 'Generar y Usar Texto',
-        // API Key Prompt
-        apiKeyRequiredTitle: 'Se Requiere Clave de API para Análisis de Imágenes',
-        apiKeyRequiredInfo: 'Para analizar imágenes, necesitas seleccionar una clave de API. Esta acción puede requerir un proyecto con la facturación habilitada.',
-        apiKeyLearnMore: 'Aprende más sobre la facturación.',
-        apiKeyError: "Tu clave de API no tiene los permisos correctos. Por favor, selecciona un proyecto con facturación habilitada e inténtalo de nuevo.",
-        selectApiKey: 'Seleccionar Clave de API',
-        cancel: 'Cancelar',
-        // Step 2
-        step2Title: 'Paso 2: Personaliza tu Cuestionario',
-        difficultyLabel: 'Dificultad',
-        easy: 'Fácil',
-        hard: 'Difícil',
-        aiChooseAmountLabel: 'Dejar que la IA elija la cantidad de preguntas',
-        numQuestionsLabel: 'Número de Preguntas',
-        questionTypesLabel: 'Tipos de Pregunta (selecciona al menos uno)',
-        multipleChoice: 'Opción Múltiple',
-        trueFalse: 'Verdadero / Falso',
-        matching: 'Relacionar',
-        shortAnswer: 'Respuesta Corta',
-        longAnswer: 'Respuesta Larga',
-        fillInTheBlank: 'Rellenar el Espacio',
-        correctionStyleLabel: 'Estilo de Corrección',
-        immediate: 'Inmediata',
-        afterQuiz: 'Después del Cuestionario',
-        both: 'Ambos',
-        spacedRepetitionLabel: 'Modo de Repetición Espaciada',
-        generateQuizButton: 'Generar Cuestionario',
-        // Quiz Step
-        reviewingQuestion: 'Revisando',
-        of: 'de',
-        question: 'Pregunta',
-        maxAttemptsReached: "Has alcanzado el máximo de intentos para esta pregunta.",
-        loadingMatchingGame: 'Cargando juego de relacionar...',
-        typeYourAnswer: 'Escribe tu respuesta aquí...',
-        submitAnswer: 'Enviar Respuesta',
-        grading: 'Calificando...',
-        continueToReview: 'Continuar a la Revisión',
-        finishQuiz: 'Finalizar Cuestionario',
-        // Results Step
-        quizComplete: '¡Cuestionario Completo!',
-        score: 'Puntuación',
-        correct: 'Correctas',
-        reviewAnswers: 'Revisa tus Respuestas',
-        yourAnswer: 'Tu Respuesta',
-        yourScore: 'Tu Puntuación',
-        points: 'Puntos',
-        correctPairings: 'Pares Correctos',
-        correctAnswer: 'Respuesta Correcta',
-        aiFeedback: 'Feedback de la IA',
-        explanation: 'Explicación',
-        tryAgain: 'Intentar de Nuevo',
-        createNewQuiz: 'Crear Nuevo Cuestionario',
-        // Loading Screen
-        generatingQuizLoader: 'Generando tu cuestionario...',
-        analyzingPdfLoader: 'Analizando PDF...',
-        analyzingDocxLoader: 'Analizando DOCX...',
-        analyzingImageLoader: 'Analizando Imagen (OCR)...',
-        researchingTopicLoader: 'Investigando',
-        loadingFromCode: 'Cargando tu cuestionario...',
-        pdfOcrFallback: 'No se encontró texto, intentando OCR...',
-        processingFile: 'Procesando archivo',
-        noTextExtracted: 'No se pudo extraer texto de los archivos seleccionados.',
-        adaptingForAudio: 'Adaptando preguntas para audio...',
-        // Export
-        export: 'Exportar',
-        saveAsPdf: 'Guardar como PDF',
-        generateAudio: 'Generar Archivo de Audio (.wav)',
-        saveToCode: 'Guardar Cuestionario en Código',
-        exportToFlashcards: 'Estudiar con Tarjetas',
-        exportToConversational: 'Iniciar Cuestionario Conversacional',
-        yourQuizCode: 'Tu Código de Cuestionario',
-        copy: 'Copiar',
-        copied: '¡Copiado!',
-        close: 'Cerrar',
-        generatingPdf: 'Generando PDF...',
-        generatingAudioFor: 'Generando audio para la pregunta',
-        combiningAudio: 'Combinando archivos de audio...',
-        pdfExportSettings: 'Ajustes de Exportación PDF',
-        audioExportSettings: 'Ajustes de Exportación de Audio',
-        pdfModalInfo: 'Tu cuestionario se guardará como un archivo PDF utilizando la fuente Oxygen para una mejor compatibilidad.',
-        pauseDuration: 'Pausa entre elementos',
-        seconds: 'segundos',
-        // Flashcards
-        preparingFlashcards: 'Preparando tus tarjetas...',
-        gotItRight: '¡Correcto!',
-        gotItWrong: 'Incorrecto',
-        dragCardHere: 'Arrastra la tarjeta aquí',
-        flashcardsComplete: '¡Todas las Tarjetas Dominadas!',
-        studyAgain: 'Estudiar de Nuevo',
-        exitFlashcards: 'Salir de Tarjetas',
-        card: 'Tarjeta',
-        flashcardHint: 'Haz clic en la tarjeta para voltearla, luego elige si la tuviste correcta o incorrecta.',
-        goToHomepage: 'Ir a la Página Principal',
-        // Conversation Mode
         exitConversation: 'Salir de Conversación',
         conversationStatusInitializing: 'Iniciando audio...',
         conversationStatusAsking: 'OmniQuiz está haciendo una pregunta...',
@@ -1497,6 +1371,23 @@ const ThemeToggleButton = ({ theme, toggleTheme }) => (
     </button>
 );
 
+// Wrapper function to handle seamless fallback to 1.5-flash on error
+const generateWithFallback = async (ai, params) => {
+    try {
+        return await ai.models.generateContent(params);
+    } catch (error) {
+        console.warn("Primary model request failed. Attempting fallback to gemini-1.5-flash.", error);
+        try {
+            return await ai.models.generateContent({
+                ...params,
+                model: 'gemini-1.5-flash'
+            });
+        } catch (fallbackError) {
+             console.error("Fallback model request also failed.", fallbackError);
+             throw error; 
+        }
+    }
+};
 
 const App = () => {
     const [step, setStep] = React.useState('input'); // 'input', 'options', 'quiz', 'results', 'flashcards', 'conversation'
@@ -1655,7 +1546,7 @@ const App = () => {
             ---
             `;
 
-            const response = await ai.models.generateContent({
+            const response = await generateWithFallback(ai, {
                 model: 'gemini-2.5-flash',
                 contents: prompt,
                 config: {
@@ -1778,7 +1669,7 @@ const LoadingScreen = ({ text, context, language, t }) => {
                     ---
                     ${context.substring(0, 2000)}
                     ---`;
-                    const response = await ai.models.generateContent({
+                    const response = await generateWithFallback(ai, {
                         model: 'gemini-2.5-flash',
                         contents: factPrompt,
                         config: {
@@ -1897,7 +1788,7 @@ const InputStep = ({ onContextReady, onLoadFromCode, showLoader, hideLoader, t }
                                 await page.render({ canvasContext: context, viewport: viewport }).promise;
                                 const base64Data = canvas.toDataURL('image/jpeg').split(',')[1];
                                 
-                                const response = await ai.models.generateContent({
+                                const response = await generateWithFallback(ai, {
                                     model: "gemini-2.5-flash",
                                     contents: { parts: [{ inlineData: { mimeType: 'image/jpeg', data: base64Data } }, { text: "Extract all text from this image." }] },
                                 });
@@ -1938,7 +1829,7 @@ const InputStep = ({ onContextReady, onLoadFromCode, showLoader, hideLoader, t }
                         }
                         const base64Data = e.target.result.split(',')[1];
                         const ai = new GoogleGenAI({ apiKey: 'AIzaSyCa-FOm-RHqDTOOmal6w6kecrCOpHutdPU' });
-                        const response = await ai.models.generateContent({
+                        const response = await generateWithFallback(ai, {
                             model: "gemini-2.5-flash",
                             contents: { parts: [{ inlineData: { mimeType: file.type, data: base64Data } }, { text: "Extract the text from this image." }] },
                         });
@@ -2017,8 +1908,8 @@ const InputStep = ({ onContextReady, onLoadFromCode, showLoader, hideLoader, t }
                 long: 'a detailed and in-depth article of about 2000 words'
             };
             const lengthDescription = lengthMap[topicLength];
-            const response = await ai.models.generateContent({
-                model: "gemini-2.5-pro",
+            const response = await generateWithFallback(ai, {
+                model: "gemini-2.5-flash",
                 contents: `Generate ${lengthDescription} about the topic: "${topic}". The text should be suitable for generating a quiz. It should be informative, well-structured, and cover key aspects of the topic. The output should be plain text, not markdown.`,
             });
             setText(response.text);
@@ -2211,7 +2102,7 @@ const FlashcardStep = ({ quizData, onExit, showLoader, hideLoader, t, language }
                     Return ONLY a JSON object with "conciseQuestion" and "conciseAnswer" keys.`;
                     
                     try {
-                        const response = await ai.models.generateContent({
+                        const response = await generateWithFallback(ai, {
                             model: 'gemini-2.5-flash',
                             contents: prompt,
                             config: {
@@ -2421,7 +2312,7 @@ const QuizStep = ({ quizData, onComplete, options, contextText, t }) => {
                     Model Answer: ${currentQuestion.answer}
                     User's Answer: ${currentAnswer}`;
                     
-                    const response = await ai.models.generateContent({
+                    const response = await generateWithFallback(ai, {
                         model: 'gemini-2.5-flash',
                         contents: prompt,
                         config: {
@@ -2663,9 +2554,13 @@ const QuizStep = ({ quizData, onComplete, options, contextText, t }) => {
             )}
 
             <div className="button-group">
-                {!isGraded && options.correctionStyle !== 'after' ? (
-                     <button className="btn btn-primary" onClick={handleSubmit} disabled={isGrading || currentAnswer === null || (Array.isArray(currentAnswer) && currentAnswer.length !== currentQuestion?.matchPairs?.length)}>
-                        {isGrading ? t('grading') : t('submitAnswer')}
+                {!isGraded ? (
+                    <button 
+                        className="btn btn-primary" 
+                        onClick={handleSubmit} 
+                        disabled={isGrading || currentAnswer === null || (Array.isArray(currentAnswer) ? currentAnswer.length !== currentQuestion.matchPairs?.length : currentAnswer.trim() === '')}
+                    >
+                        {isGrading ? t('grading') : (options.correctionStyle === 'after' ? (currentQuestionIndex < currentQuizData.length - 1 ? t('nextButton') : t('finishQuiz')) : t('submitAnswer'))}
                     </button>
                 ) : (
                      <button className="btn btn-primary" onClick={handleNext}>
@@ -2721,8 +2616,8 @@ ${contextText.substring(0, 4000)}
 
 Return ONLY a JSON object that strictly follows the provided schema. For 'multiple-choice', provide exactly 4 options.`;
 
-            const response = await ai.models.generateContent({
-                model: 'gemini-2.5-pro',
+            const response = await generateWithFallback(ai, {
+                model: 'gemini-2.5-flash',
                 contents: prompt,
                 config: { responseMimeType: 'application/json', responseSchema: newQuestionSchema }
             });
